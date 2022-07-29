@@ -36,7 +36,8 @@ a {
 }
 .paper-main {
   width: 100%;
-  max-width: 880px;
+  max-width: 1000px;
+  min-width: 375px;
   margin: 0 auto;
   padding: 72px 4vw 24px;
   background: #fff;
