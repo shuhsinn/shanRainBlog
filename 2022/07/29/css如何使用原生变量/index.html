@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/png" href="/img/favicon.png">
+    <title>他山之雨的Blog | 分享技术</title>
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/markdown.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">他山之雨的Blog</a>
+    <a class="go-home" href="/">
+        <svg width="8" height="14" viewBox="0 0 8 14">
+            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
+                
+                <div class="post-main">
+
+    
+        <div class="post-main-title">
+            css如何使用原生变量
+        </div>
+        <div class="post-meta">
+            2022-07-29
+        </div>
+    
+
+    <div class="post-md">
+        <p><code>答</code> : 需要使用css3新增的一个伪类选择器root，将定义好的变量(均以 – 声明:例如 –color)挂载到root选择器上,然后在其他地方使用var()语法引用</p>
+<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><h5 id="root"><a href="#root" class="headerlink" title=":root"></a>:root</h5><p>root是一个伪类，表示文档根元素，所有主流浏览器均支持 :root 选择器，除了 IE8 及更早的版本。在:root中声明相当于全局属性，只要当前页面引用了:root 变量所在文件，都可以使用var()来引用。</p>
+<h5 id="var"><a href="#var" class="headerlink" title="var()"></a>var()</h5><p>  var()函数可以代替元素中任何属性中的值的任何部分。var()函数不能作为属性名、选择器或者其他除了属性值之外的值。(var()函数无法计算 scss&#x2F;less 等需要编译才能正常使用的变量)</p>
+<h5 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h5><pre><code class="css">//定义
+:root &#123;
+    --el-dark-value: 10%;
+    --el-font-size-base: 25px;
+    --el-color-primary-lighter: #72a1ed;
+    --el-color-primary-lightest: #9abcf2;
+    --el-color-secondary: #ebedf0;
+&#125;
+
+//使用时
+font-size: var(--el-font-size-base);
+</code></pre>
+
+    </div>
+
+</div>
+                <div class="footer">
+  <span>Copyright © 2022 他山之雨的Blog</span>
+  <!-- <span>Theme Designed By <a target="_blank" href="https://zheli.design/one-paper">這Li</a></span> -->
+</div>
+
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+ 
+<script src="/js/highlight.min.js"></script>
+ 
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+<script>
+  hljs.initHighlightingOnLoad();
+  hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>
