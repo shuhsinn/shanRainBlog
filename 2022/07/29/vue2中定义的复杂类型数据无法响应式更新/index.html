@@ -42,15 +42,19 @@
                 
                 <div class="post-main">
   
-  <div class="post-main-title">git如何clone仓库时锁定账户与密码</div>
+  <div class="post-main-title">vue2中定义的复杂类型数据无法响应式更新.</div>
   <div class="post-meta">2022-07-29</div>
   
 
-  <div class="post-md"><p><code>答</code> : 需要将指定账密 与 git仓库地址 写在一起,然后进行仓库的克隆</p>
-<h5 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h5><pre><code class="git">//定义
-//用户名为邮箱时,邮箱的@符号需要转译成%40
+  <div class="post-md"><p><code>答</code> : 涉及到复杂类型的变量, 使用 官方自带的 $set, $delete 工具进行增删改操作.</p>
+<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><h5 id="set-x2F-delete"><a href="#set-x2F-delete" class="headerlink" title="$set&#x2F;$delete"></a>$set&#x2F;$delete</h5><p>在 Vue2 中，修改某一些数据，视图是不能及时重新渲染的。原因就是 Vue2 中的数据响应式是利用 object definedProperty()实现的，它是无法深层监听数据的变化的。因此，Vue2 就提供了一些变异的方法，比如$set $delete </p>
+<h5 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h5><pre><code class="js">const editableData = &#123;&#125;;
 
-git clone -b branchA http://userName:password@链接
+// $set(对象, 对象属性, 属性值);
+$set(editableData, id, item);
+
+// $delete(对象, 对象属性);
+$delete(editableData, id);
 </code></pre>
 </div>
 </div>
